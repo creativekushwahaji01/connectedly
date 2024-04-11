@@ -63,8 +63,8 @@ html {
   color: black;
   /* height: 50px; */
   text-align: center;
-  position: fixed;
-  bottom: 0;
+  /* position: fixed; */
+  /* bottom: 0; */
   width: 100vw;
 }
 h3{
@@ -125,6 +125,7 @@ ul li {
 
 .SignUp {
   text-align: center;
+  
 }
 
 .SignUp h1 {
@@ -137,6 +138,7 @@ ul li {
   display: inline-grid;
   width: calc(300px + 1vw);
   margin: 50px;
+  backdrop-filter: blur(10px);
 }
 
 .input {
@@ -156,15 +158,12 @@ ul li {
   cursor: pointer;
 }
 
-.main_page {
-  display: flex;
-  justify-content: center;
-}
 
 .userinput {
   border: 2px solid;
   border-color: var(--bg);
   border-radius: 20px;
+  
 }
 
 .authtext {
@@ -537,11 +536,11 @@ ul li {
 .news-item {
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 20px;
+  padding: 0px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 40vw;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -549,11 +548,13 @@ ul li {
 .news-item img {
   width: 200px;
   height: auto;
+  padding-left: 15px;
   border-radius: 8px;
 }
 
 .news-details {
   margin-top: 10px;
+  padding: 0 20px;
 }
 
 .news-details h2 {
@@ -573,3 +574,29 @@ ul li {
   /* width: 80%; */
   grid-gap: 40px;
 }
+
+.main_page{
+  display: flex;
+  justify-content: center;
+  background-image: url("./imgs/bgimg.jpg");
+  width: 100vw;
+  height: 82vh;
+  min-height: 550px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+input::placeholder {
+  background: transparent;
+}
+
+.input {
+  background-color: transparent;
+  color: #207378;
+}
+
+
+.main_page {
+  color: white;
+}
+

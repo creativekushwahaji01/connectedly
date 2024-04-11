@@ -1,5 +1,6 @@
 import React from "react";
 import bgimg from '../imgs/communitybgimg.png'
+import Bio from "./Bio";
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Bio/>
     </div>
   );
 }

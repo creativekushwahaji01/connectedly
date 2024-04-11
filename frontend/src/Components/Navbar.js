@@ -30,7 +30,10 @@ const Navbar = () => {
 
                 </ul>
             ) : (
-                <AuthForm />
+                // <AuthForm />
+                <ul className="navbar">
+                    <li><Link to='/Authform' className="linktry"></Link> </li>
+                </ul>
             )}
         </div>
     );

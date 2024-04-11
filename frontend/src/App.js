@@ -28,7 +28,7 @@ function App() {
             {/* <Route path="/logout" element={<h1>Logout listing component</h1>} /> */}
             <Route path="/profile" element={<h2>Profile</h2>} />
           </Route>
-          {/* <Route path="/Authform" element={<AuthForm />} /> */}
+          <Route path="/Authform" element={<AuthForm />} />
         </Routes>
         <Footer />
       </BrowserRouter>

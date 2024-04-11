@@ -16,6 +16,13 @@ function SignUp() {
 
     const Collectdata = async () => {
         console.log(name, email, password);
+        
+        // Check if any field is empty
+        if (!name || !email || !password) {
+            alert("Please fill in all fields.");
+            return; // Exit function if any field is empty
+        }
+
         const result = await fetch('http://localhost:5000/register', {
             method: 'POST', // Fixed method name to uppercase
             body: JSON.stringify({ name, email, password }),
@@ -33,7 +40,7 @@ function SignUp() {
     };
 
     return (
-        <div className='SignUp'>
+        <div className='SignUp inbar'>
             <h1>Register user</h1>
             <div className='userinput'>
                 <input className='input' type='text' value={name} onChange={(e) => setName(e.target.value)} placeholder='Enter your name' />
