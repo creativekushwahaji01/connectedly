@@ -20,6 +20,7 @@ html {
   display: flex;
   justify-content: space-evenly;
   width: 60%;
+  font-family: "Shantell Sans", cursive;
 }
 
 .navmain {
@@ -34,15 +35,17 @@ html {
   display: flex;
   text-align: center;
   justify-content: center;
- 
+
 }
 
 .linktry {
   text-decoration: none;
   color: black;
   text-transform: capitalize;
-  font-size: 20px;
-  font-weight: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
   /* border: 2px solid rgb(75, 75, 67);
   border-radius: 20px;
   padding: 0px 5px; */
@@ -67,21 +70,29 @@ html {
   /* bottom: 0; */
   width: 100vw;
 }
-h3{
+
+h3 {
   font-size: 30px;
 }
+
 h1 {
   text-transform: capitalize;
 }
-label{
-  margin-top: 10px;
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+
 }
+
 .addone {
   display: flex;
   justify-content: space-evenly;
   margin-top: 20px;
 }
-.container > h2:nth-child(1) {
+
+.container>h2:nth-child(1) {
   font-size: 40px;
   text-align: center;
 }
@@ -113,7 +124,8 @@ ul li a {
   list-style: none;
   text-decoration: none;
   color: black;
-  text-align: start;
+  text-align: center;
+  align-self: center;
 }
 
 ul li {
@@ -125,7 +137,7 @@ ul li {
 
 .SignUp {
   text-align: center;
-  
+
 }
 
 .SignUp h1 {
@@ -163,7 +175,7 @@ ul li {
   border: 2px solid;
   border-color: var(--bg);
   border-radius: 20px;
-  
+
 }
 
 .authtext {
@@ -575,7 +587,7 @@ ul li {
   grid-gap: 40px;
 }
 
-.main_page{
+.main_page {
   display: flex;
   justify-content: center;
   background-image: url("./imgs/bgimg.jpg");
@@ -600,3 +612,46 @@ input::placeholder {
   color: white;
 }
 
+.newseve {
+  background-image: url('./imgs/blackbg.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 600px;
+  color: white;
+  background-repeat: no-repeat;
+}
+
+.newsadd {
+  backdrop-filter: blur(5px);
+  padding: 0;
+  color: white;
+  padding-top: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 25px;
+  width: 18vw;
+  border: 2px solid #f0f8ff3b;
+  border-radius: 20px;
+}
+
+.newsadd h3 {
+  text-align: center;
+  font-size: 48px;
+}
+.newsadd button{
+  margin-left: 30%;
+  height: 30px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0.2s;
+  transition: color 0.3s ease 0.2s;
+}
+.newsadd button:hover {
+  background-color: #bac0c6;
+  color: black;
+  transition-delay: 0s;
+}

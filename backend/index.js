@@ -28,17 +28,17 @@ app.post("/login",async (req,resp)=>{
   }
 })
 
-app.get('/user/:_id', async(req,resp)=>{
-  const result=await User.findOne({_id:req.params.id});
-  if(result){
-    resp.send(result)
+app.get('/user/:_id', async (req, resp) => {
+  const result = await User.findOne({ _id: req.params._id });
+  if (result) {
+    resp.send(result);
+  } else {
+    resp.send({ result: 'user not found' });
   }
-  else{
-    resp.send({result:'user not found'})
-  }
-})
+});
 
-app.delete('/user/:id', async (req, resp) => {
+
+app.delete('/user/:_id', async (req, resp) => {
   try {
     const result = await User.deleteOne({ _id: req.params.id });
     resp.send(result);
@@ -97,5 +97,24 @@ app.get('/partners', async(req,resp)=>{
   let result=await Partners.find();
   resp.send(result);
 })
-app.listen(5000);
 
+app.put('/user', async (req, res) => {
+  try {
+    const updatedUserData = req.body;
+
+    // Update user data in the database
+    const user = await User.findOneAndUpdate({}, updatedUserData, { new: true });
+
+    res.json({ message: 'User data updated successfully', userData: user });
+  } catch (error) {
+    console.error('Error updating user data:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+app.get('/user', async(req,resp)=>{
+  let result=await Partners.find();
+  resp.send(result);
+})
+app.listen(5000, () => {
+  console.log("Server is running at port 5000");
+});

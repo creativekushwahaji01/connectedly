@@ -9,6 +9,7 @@ import CommunityPartnerComponent from "./Components/Communitypartner";
 import News from "./Components/News";
 import NewsAddingComponent  from "./Components/AddNewsComponent";
 import Event from "./Components/Events";
+import UserProfile from "./Components/Userprofile";
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
             <Route path="/members" element={<h1>members</h1>} />
             <Route path="/addinfo" element={<NewsAddingComponent/>} />
             {/* <Route path="/logout" element={<h1>Logout listing component</h1>} /> */}
-            <Route path="/profile" element={<h2>Profile</h2>} />
+            <Route path="/profile" element={<UserProfile/>} />
           </Route>
           <Route path="/Authform" element={<AuthForm />} />
         </Routes>

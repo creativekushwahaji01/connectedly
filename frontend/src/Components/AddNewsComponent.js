@@ -65,82 +65,82 @@ const NewsAddingComponent = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container newseve">
       <h2>Add News and Events</h2>
-        <div className="addone">
-      {/* News Form */}
-      <form onSubmit={handleSubmitNews}>
-        <h3>Add News</h3>
-        <label>
-          Topic Description:
-          <input
-            type="text"
-            value={topic}
-            onChange={(e) => setTopic(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Description:
-          <textarea
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Image URL:
-          <input
-            type="text"
-            value={imgUrl}
-            onChange={(e) => setImgUrl(e.target.value)}
-          />
-        </label>
-        <br />
-        <button type="submit">Submit News</button>
-      </form>
+      <div className="addone">
+        {/* News Form */}
+        <form className="newsadd" onSubmit={handleSubmitNews}>
+          <h3>Add News</h3>
+          <label>
+            Topic Description:
+            <input
+              type="text"
+              value={topic}
+              onChange={(e) => setTopic(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Description:
+            <textarea
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Image URL:
+            <input
+              type="text"
+              value={imgUrl}
+              onChange={(e) => setImgUrl(e.target.value)}
+            />
+          </label>
+          <br />
+          <button type="submit">Publish News</button>
+        </form>
 
-      {/* Event Form */}
-      <form onSubmit={handleSubmitEvent}>
-        <h3>Add Event</h3>
-        <label>
-          Topic:
-          <input
-            type="text"
-            value={eventTopic}
-            onChange={(e) => setEventTopic(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Venue:
-          <input
-            type="text"
-            value={venue}
-            onChange={(e) => setVenue(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Date:
-          <input
-            type="text"
-            value={eventDate}
-            onChange={(e) => setEventDate(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Image URL:
-          <input
-            type="text"
-            value={eventImgUrl}
-            onChange={(e) => setEventImgUrl(e.target.value)}
-          />
-        </label>
-        <br />
-        <button type="submit">Submit Event</button>
-      </form>
+        {/* Event Form */}
+        <form className="newsadd" onSubmit={handleSubmitEvent}>
+          <h3>Add Event</h3>
+          <label>
+            Topic:
+            <input
+              type="text"
+              value={eventTopic}
+              onChange={(e) => setEventTopic(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Venue:
+            <input
+              type="text"
+              value={venue}
+              onChange={(e) => setVenue(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Date:
+            <input
+              type="text"
+              value={eventDate}
+              onChange={(e) => setEventDate(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Image URL:
+            <input
+              type="text"
+              value={eventImgUrl}
+              onChange={(e) => setEventImgUrl(e.target.value)}
+            />
+          </label>
+          <br />
+          <button type="submit">Publish Event</button>
+        </form>
       </div>
 
       {errorMessage && <p className="error-message">{errorMessage}</p>}
