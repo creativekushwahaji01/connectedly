@@ -27,7 +27,6 @@ const Navbar = () => {
                     <li><Link to="/addinfo" className="linktry">Add news & events</Link></li>
                     <li><Link to="/profile" className="linktry">Profile</Link></li>
                     <li><Link onClick={logout} to="/Authform" className="linktry">Logout</Link></li>
-
                 </ul>
             ) : (
                 // <AuthForm />
@@ -37,6 +36,6 @@ const Navbar = () => {
             )}
         </div>
     );
-};
+};3
 
 export default Navbar;
