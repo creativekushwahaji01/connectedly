@@ -20,7 +20,7 @@ html {
   display: flex;
   justify-content: space-evenly;
   width: 60%;
-  font-family: "Shantell Sans", cursive;
+  font-family: "Shantell Sans";
 }
 
 .navmain {
@@ -43,13 +43,18 @@ html {
   color: black;
   text-transform: capitalize;
   font-size: 22px;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
   letter-spacing: 1px;
   /* border: 2px solid rgb(75, 75, 67);
   border-radius: 20px;
   padding: 0px 5px; */
+  transition: all 0.3 ease;
+}
 
+.linktry:hover{
+  font-size: 24px;
+  color: #4b3f3f;
 }
 
 .navmain {
@@ -69,6 +74,21 @@ html {
   /* position: fixed; */
   /* bottom: 0; */
   width: 100vw;
+  padding: 25px 10px;
+}
+.footer_cent {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.footertext{
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.bio > div:nth-child(2) > p:nth-child(1) {
+  padding: 5px 10vw;
+  color: #360097;
 }
 
 h3 {
@@ -372,7 +392,7 @@ input::placeholder {
   align-items: center;
   justify-content: space-between;
   gap: 140px;
-  min-height: calc(100vh - 80px);
+  min-height: calc(80vh );
 }
 
 @media (max-width: 767px) {
@@ -655,3 +675,4 @@ input::placeholder {
   color: black;
   transition-delay: 0s;
 }
+

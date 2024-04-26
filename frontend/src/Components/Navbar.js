@@ -24,7 +24,7 @@ const Navbar = () => {
                     <li><Link to="/events" className="linktry">events</Link></li>
                     <li><Link to="/comunitypartners" className="linktry">Community partners</Link></li>
                     {/* <li><Link to="/members" className="linktry">Members</Link></li> */}
-                    <li><Link to="/addinfo" className="linktry">Add news & events</Link></li>
+                    {/* <li><Link to="/addinfo" className="linktry">Add news & events</Link></li> */}
                     <li><Link to="/profile" className="linktry">Profile</Link></li>
                     <li><Link onClick={logout} to="/Authform" className="linktry">Logout</Link></li>
                 </ul>
@@ -36,6 +36,6 @@ const Navbar = () => {
             )}
         </div>
     );
-};3
+};
 
 export default Navbar;

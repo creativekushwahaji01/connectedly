@@ -116,34 +116,6 @@ app.get('/user', async(req,resp)=>{
   resp.send(result);
 })
 
-app.put('/user/:id', async (req, res) => {
-  try {
-    const updatedUserData = req.body;
-    const { id } = req.params;
-
-    // Validate the request body
-    if (!updatedUserData.name || !updatedUserData.email) {
-      return res.status(400).json({ error: 'Name and email are required' });
-    }
-
-    // Update user data in the database
-    const user = await User.findOneAndUpdate({ _id: id }, updatedUserData, { new: true });
-
-    if (!user) {
-      return res.status(404).json({ error: 'User not found' });
-    }
-
-    res.json({ message: 'User data updated successfully', userData: user });
-  } catch (error) {
-    console.error('Error updating user data:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-
-
-
-
 app.listen(5000, () => {
   console.log("Server is running at port 5000");
 });

@@ -6,10 +6,9 @@ const Footer = () => {
   return (
     <footer className="footer mt-5">
       <Container>
+      <p className="footertext"> &copy; 2024 CODE CREW. All rights reserved.</p>
+      <div className="footer_cent">
         <Row>
-          <Col>
-            <p>&copy; 2024 CODE CREW. All rights reserved.</p>
-          </Col>
           <Col className="social-icons">
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /> Facebook</a>
             <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /> Twitter</a>
@@ -28,6 +27,7 @@ const Footer = () => {
             </div>
           </Col>
         </Row>
+        </div>
       </Container>
     </footer>
   );
