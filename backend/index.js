@@ -80,12 +80,14 @@ app.post("/events", async (req,resp)=>{
   let events = new Events(req.body);
   let result= await events.save();
   result=result.toObject();
+  console.log(result)
   resp.send(result);
 })
 
 app.get('/events', async(req,resp)=>{
   let result=await Events.find();
   resp.send(result);
+  console.log(result)
 })
 app.post("/partners", async (req,resp)=>{
   let partners = new Partners(req.body);
