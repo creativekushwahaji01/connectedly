@@ -23,25 +23,26 @@ const Event = () => {
 
   return (
     <div className="container">
-      <h2 className="Event_head"> upcoming Events</h2>
+      <h1 className="title">Tech Community Events</h1>
+      <p className="description">
+        Discover upcoming and past tech events organized by community members and global tech leaders
+      </p>
       {loading ? (
         <p>Loading...</p>
       ) : (
         <div className="event_main">
           {events.length === 0 ? (
-            <p>No events found.</p> 
+            <p>No events found.</p>
           ) : (
             <ul>
               {events.map((event) => (
-                <div className="event_details">
+                <div className="event_details" key={event._id}>
                   <div className="event_description">
-                    <li className="event_li" key={event._id}>
-                      <h3>{event.topic}</h3>
-                      <p>Date: {new Date(event.date).toLocaleDateString()}</p>
-                      <p>Venue: {event.venue}</p>
-                      <p>Speaker: {event.speaker}</p>
-                      <p>Description: {event.description}</p>
-                    </li>
+                    <h3>{event.topic}</h3>
+                    <p>Date: {new Date(event.date).toLocaleDateString()}</p>
+                    <p>Venue: {event.venue}</p>
+                    <p>Speaker: {event.speaker}</p>
+                    <p>Description: {event.description}</p>
                   </div>
                   <div className="event_img">
                     <img className="eve_img" src={event.imgUrl} alt="Event" />

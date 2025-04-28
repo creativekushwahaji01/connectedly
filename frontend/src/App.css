@@ -24,8 +24,8 @@ html {
 }
 
 .navmain {
-  background: linear-gradient(90deg, rgba(51, 173, 199, 1) 0%, rgba(23, 210, 199, 1) 32%, rgba(60, 244, 208, 1) 44%, rgba(26, 245, 209, 1) 49%, rgba(0, 212, 255, 1) 100%);
-  color: black;
+  background: linear-gradient(90deg, rgb(18, 36, 41) 0%, rgb(13, 33, 32) 32%, rgb(11, 50, 43) 44%, rgb(2, 26, 22) 49%, rgb(13, 14, 14) 100%);
+  color: rgb(239, 222, 222);
 
 }
 
@@ -35,12 +35,12 @@ html {
   display: flex;
   text-align: center;
   justify-content: center;
-
+  color: #ccc;
 }
 
 .linktry {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   text-transform: capitalize;
   font-size: 22px;
   /* font-weight: bold; */

@@ -1,41 +1,50 @@
 import React, { useState, useEffect } from 'react';
+import './news.css'; // Import the CSS file for styling
 
-function NewsComponent() {
-    const [newsData, setNewsData] = useState([]);
+function EventsComponent() {
+    const [news, setNews] = useState([]);
 
     useEffect(() => {
-        async function fetchNewsData() {
+        async function fetchEventsData() {
             try {
                 const response = await fetch('http://localhost:5000/news');
                 const data = await response.json();
-                setNewsData(data);
+                console.log(data)
+                setNews(data);
             } catch (error) {
-                console.error('Error fetching news data:', error);
+                console.error('Error fetching newss data:', error);
             }
         }
 
-        fetchNewsData();
+        fetchEventsData();
     }, []);
 
     return (
         <div className="news-container">
-            <div className='newshead headcommunity'>
-                <h1>Get daily update of technology and community news</h1>
+            <div className="news-header">
+                <h1>Tech Community Events</h1>
+                <p>Stay updated with the latest News of our community</p>
             </div>
-            <div className='newsmap'>
-            {newsData.map(newsItem => (
-                <div key={newsItem.id} className="news-item">
-                    <img src={newsItem.imgUrl} alt={newsItem.topic} />
-                    <div className="news-details">
-                        <h2>{newsItem.topic}</h2>
-                        <p>Date Uploaded: {newsItem.date}</p>
-                        <p>{newsItem.description}</p>
+
+            <div className="news-grid">
+                {news.map((news) => (
+                    <div key={news.id} className="news-card">
+                        <div className="news-image">
+                            <img src={news.imgUrl || '/placeholder.svg'} alt={news.topic} />
+                        </div>
+                        <div className="news-details">
+                            <h2>{news.topic}</h2>
+                            <p>{new Date(news.date).toLocaleDateString()}</p>
+                            <p>{news.description}</p>
+                        </div>
+                        <div className="news-footer">
+                            <button className="learn-more-btn">Learn More</button>
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
             </div>
         </div>
     );
 }
 
-export default NewsComponent;
+export default EventsComponent;

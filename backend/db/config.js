@@ -1,4 +1,11 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodb://127.0.0.1:27017/codecrew");
+
+mongoose.connect("mongodb+srv://database_connect:connect0987@cluster0.okeuehz.mongodb.net/connectedly?retryWrites=true&w=majority&appName=Cluster0")
+  .then(() => {
+    console.log('✅ Connected to MongoDB');
+  })
+  .catch((error) => {
+    console.error('❌ MongoDB connection error:', error);
+  });
 
 module.exports = mongoose;

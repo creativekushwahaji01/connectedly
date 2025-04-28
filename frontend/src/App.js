@@ -10,7 +10,7 @@ import News from "./Components/News";
 import NewsAddingComponent  from "./Components/AddNewsComponent";
 import Event from "./Components/Events";
 import UserProfile from "./Components/Userprofile";
-
+import TechDashboard from "./Components/Dashboard";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Routes>
           {/* Private routes */}
           <Route element={<PrivateComponent />}>
-            <Route path="/" element={<Home/>} />
+          <Route path="/" element={<TechDashboard/>} />
             <Route path="/news" element={<News/>} />
             <Route path="/events" element={<Event/>} />
             <Route path="/comunitypartners" element={<CommunityPartnerComponent/>} />
